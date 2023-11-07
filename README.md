@@ -14,6 +14,28 @@ This project aims to deepen your understanding of the two concepts that you alre
  - [ ] Write the Program;
  - [ ] Debugging;
 
+## What is errno?
+
+The <errno.h> header file defines the integer variable errno, which is set by system calls and some library functions in the event of an error to indicate what went wrong.
+
+|errno value|Code|Error |
+|---|---|---|
+|0|-|Success|
+|1|EPERM|Operation not permitted|
+|2|ENOENT|No such file or directory|
+|3|ESRCH|No such process|
+|4|EINTR|Interrupted system call|
+|5|EIO|I/O error|
+|6|ENXIO|No such device or address|
+|7|E2BIG|Argument list too long|
+|8|ENOEXEC|Exec format error|
+|9|EBADF|Bad file number|
+|10|ECHILD|No child processes|
+|11|EAGAIN|Try again|
+|12|ENOMEM|Out of memory|
+|13|EACCES|Permission denied|
+...
+<a href="https://www.thegeekstuff.com/2010/10/linux-error-codes/#optiontable">linux error codes</a>
 
 ## External Functions (DESCRIPTIONS)
 
@@ -112,7 +134,9 @@ The value of pid can be:
 
 ## Useful Links
 
-[pipex playlist - youtube](https://youtube.com/playlist?list=PLK4FY1IoDcHG-jUt93Cl7n7XLQDZ0q7Tv&si=Naf0G7BmE_D69laf).
+[pipex playlist - youtube](https://youtube.com/playlist?list=PLK4FY1IoDcHG-jUt93Cl7n7XLQDZ0q7Tv&si=Naf0G7BmE_D69laf);
+
+[error handling in c - errno](https://www.geeksforgeeks.org/error-handling-in-c/);
 
 [42: A Comprehensive Guide to Pipex](https://dev.to/herbievine/42-a-comprehensive-guide-to-pipex-5165);
 
