@@ -4,6 +4,8 @@
 
 "This project is about handling pipes."
 
+This project aims to deepen your understanding of the two concepts that you already know: Re-directions and Pipes. It is an introductory project for the bigger UNIX projects that will appear later on in the cursus.
+
 ## Task List
 
  - [ ] Test all of the "new" external functions;
