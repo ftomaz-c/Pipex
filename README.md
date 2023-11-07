@@ -4,6 +4,15 @@
 
 "This project is about handling pipes."
 
+## Task List
+
+ - [ ] Test all of the "new" external functions;
+ - [ ] Understand the theory and all the external functions;
+ - [ ] Write the pseudo code - parsing, execution, cleanup, etc;
+ - [ ] Write the Program;
+ - [ ] Debugging;
+
+
 ### External Functions (DESCRIPTIONS)
 
 #### perror()
@@ -53,7 +62,7 @@ Executes the program referred to by <strong>pathname</strong>.  This causes the 
 
 <strong>envp</strong> is an array of pointers to strings, conventionally of the form key=value, which are passed as the environment of the new program.  The envp array must be terminated by a NULL pointer.
 
-#### fork
+#### fork()
 ```
 #include <unistd.h>
 
@@ -61,8 +70,40 @@ pid_t fork(void);
 ```
 Creates a new process by duplicating the calling process.  The new process is referred to as the child process.  The calling process is referred to as the parent process.
 
+#### pipe()
+```
+#include <unistd.h>
 
-* pipe
-* unlink
-* wait
-* waitpid
+int pipe(int pipefd[2]);
+```
+Creates  a pipe, a unidirectional data channel that can be used for interprocess communication.  The array pipefd is used to return two file descriptors referring to the ends of the pipe.  pipefd[0] refers to the read end of the pipe.  pipefd[1] refers to the write end of the pipe.  Data written to the write end of the pipe is buffered by the kernel until it is read from the read end of the pipe.
+
+#### unlink
+```
+unlink FILE
+unlink OPTION
+```
+Remove the specified FILE.
+
+* wait, waitpid
+```
+#include <sys/wait.h>
+
+pid_t wait(int *wstatus);
+pid_t waitpid(pid_t pid, int *wstatus, int options);
+```
+The wait() system call suspends execution of the calling thread until one of its children terminates.  The call wait(&wstatus) is equivalent to:
+
+	waitpid(-1, &wstatus, 0);
+
+The waitpid() system call suspends execution of the calling thread until a child specified by pid argument has changed state.  By default, waitpid() waits only for terminated children, but this behavior is modifiable via the options argument, as described below.
+
+The value of pid can be:
+
+	< -1	meaning wait for any child process whose process group ID is equal to the absolute value of pid.
+
+	-1		meaning wait for any child process.
+
+	0		meaning wait for any child process whose process group ID is equal to that of the calling process at the time of the call to waitpid().
+
+	> 0		meaning wait for the child whose process ID is equal to the value of pid.
