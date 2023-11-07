@@ -104,11 +104,11 @@ The value of pid can be:
 
 	< -1	meaning wait for any child process whose process group ID is equal to the absolute value of pid.
 
-	-1		meaning wait for any child process.
+	-1	meaning wait for any child process.
 
-	0		meaning wait for any child process whose process group ID is equal to that of the calling process at the time of the call to waitpid().
+	0	meaning wait for any child process whose process group ID is equal to that of the calling process at the time of the call to waitpid().
 
-	> 0		meaning wait for the child whose process ID is equal to the value of pid.
+	> 0	meaning wait for the child whose process ID is equal to the value of pid.
 
 ## Useful Links
 
