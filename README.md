@@ -15,9 +15,9 @@ This project aims to deepen your understanding of the two concepts that you alre
  - [ ] Debugging;
 
 
-### External Functions (DESCRIPTIONS)
+## External Functions (DESCRIPTIONS)
 
-#### perror()
+### perror()
 ```
 #include <errno.h>
 
@@ -25,7 +25,7 @@ void perror(const char *s);
 ```
 Prints a system error message on the standard error describing the error encountered during a call to a system or library function.
 
-#### strerror()
+### strerror()
 ```
 #include <string.h>
 
@@ -33,7 +33,7 @@ char *strerror(int errnum);
 ```
 Returns a pointer to a string that describes the error code passed in the argument errnum.
 
-#### access()
+### access()
 ```
 #include <unistd.h>
 
@@ -41,7 +41,7 @@ int access(const char *pathname, int mode);
 ```
 Checks whether the calling process can access the file pathname. The  mode  specifies the accessibility check(s) to be performed. F_OK tests for the existence of the file. R_OK, W_OK, and X_OK test whether the file exists and grants read, write, and execute permissions, respectively.
 
-#### dup, dup2
+### dup, dup2
 ```
 #include <unistd.h>
 
@@ -52,7 +52,7 @@ The <strong>dup()</strong> system call allocates a new file descriptor that refe
 
 The <strong>dup2()</strong> system  call  performs the same task as dup(), but instead of using the lowest-numbered unused file descriptor, it uses the file descriptor number specified in newfd.  In other words, the file descriptor newfd is adjusted so that it now refers to the same open file description as oldfd.
 
-#### execve()
+### execve()
 ```
 #include <unistd.h>
 
@@ -64,7 +64,7 @@ Executes the program referred to by <strong>pathname</strong>.  This causes the 
 
 <strong>envp</strong> is an array of pointers to strings, conventionally of the form key=value, which are passed as the environment of the new program.  The envp array must be terminated by a NULL pointer.
 
-#### fork()
+### fork()
 ```
 #include <unistd.h>
 
@@ -72,7 +72,7 @@ pid_t fork(void);
 ```
 Creates a new process by duplicating the calling process.  The new process is referred to as the child process.  The calling process is referred to as the parent process.
 
-#### pipe()
+### pipe()
 ```
 #include <unistd.h>
 
@@ -80,14 +80,14 @@ int pipe(int pipefd[2]);
 ```
 Creates  a pipe, a unidirectional data channel that can be used for interprocess communication.  The array pipefd is used to return two file descriptors referring to the ends of the pipe.  pipefd[0] refers to the read end of the pipe.  pipefd[1] refers to the write end of the pipe.  Data written to the write end of the pipe is buffered by the kernel until it is read from the read end of the pipe.
 
-#### unlink
+### unlink
 ```
 unlink FILE
 unlink OPTION
 ```
 Remove the specified FILE.
 
-* wait, waitpid
+### wait, waitpid
 ```
 #include <sys/wait.h>
 
@@ -109,3 +109,11 @@ The value of pid can be:
 	0		meaning wait for any child process whose process group ID is equal to that of the calling process at the time of the call to waitpid().
 
 	> 0		meaning wait for the child whose process ID is equal to the value of pid.
+
+## Useful Links
+
+[pipex playlist - youtube](https://youtube.com/playlist?list=PLK4FY1IoDcHG-jUt93Cl7n7XLQDZ0q7Tv&si=Naf0G7BmE_D69laf).
+
+[42: A Comprehensive Guide to Pipex](https://dev.to/herbievine/42-a-comprehensive-guide-to-pipex-5165);
+
+[pipex tutorial - 42 project](https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901);
