@@ -39,49 +39,55 @@ The <errno.h> header file defines the integer variable errno, which is set by sy
 
 ## External Functions (DESCRIPTIONS)
 
-* File Operations:
+### File Operations:
 
-		open: To open files for reading or writing.
-		close: To close file descriptors after using them.
+open: To open files for reading or writing.
 
-* File I/O:
+close: To close file descriptors after using them.
 
-		read: To read from a file or a file descriptor.
-		write: To write to a file or a file descriptor.
+### File I/O:
 
-* Memory Allocation:
+read: To read from a file or a file descriptor.
 
-		malloc: If dynamic memory allocation is needed, e.g., for storing command arguments.
-  
-		free: To release dynamically allocated memory.
+write: To write to a file or a file descriptor.
 
-* Error Handling:
+### Memory Allocation:
 
-		[perror](#perror): To print an error message corresponding to the last system call error.
-		[strerror](#strerror): To obtain a string representation of an error number.
+malloc: If dynamic memory allocation is needed, e.g., for storing command arguments.
 
-* File and Command Validation:
+free: To release dynamically allocated memory.
 
-		[access](#access): To check file access permissions.
+### Error Handling:
 
-* Process Control:
+[perror](#perror): To print an error message corresponding to the last system call error.
 
-		[fork](#fork): To create a new process.
-		[execve](#execve): To replace the current process image with a new one (execute a command).
-		exit: To terminate a process.
+[strerror](#strerror): To obtain a string representation of an error number.
 
-* Pipes:
+### File and Command Validation:
 
-		[pipe](#pipe): To create a pipe for communication between processes.
-		[dup, dup2](#dup-dup2): To duplicate file descriptors, useful for redirecting standard input/output.
+[access](#access): To check file access permissions.
 
-* Waiting for Processes:
+### Process Control:
 
-		[wait, waitpid](#wait-waitpid): To wait for child processes to complete.
+[fork](#fork): To create a new process.
 
-* Removing Files:
+[execve](#execve): To replace the current process image with a new one (execute a command).
 
-		[unlink](#unlink): To remove a file.
+exit: To terminate a process.
+
+### Pipes:
+
+[pipe](#pipe): To create a pipe for communication between processes.
+
+[dup, dup2](#dup-dup2): To duplicate file descriptors, useful for redirecting standard input/output.
+
+### Waiting for Processes:
+
+[wait, waitpid](#wait-waitpid): To wait for child processes to complete.
+
+### Removing Files:
+
+[unlink](#unlink): To remove a file.
 
 ### perror()
 ```
