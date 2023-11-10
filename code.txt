@@ -1,0 +1,74 @@
+1. Parsing command line arguments:
+	*argc, argv, to ensure the program is called with enough/correct arguments;
+	*if not print usage message guide;
+
+	if (argc != 5)
+	{
+		ft_printf(stderr, "Usage: %s file1 cmd1 cmd2 file2\n", argv[0]);
+		exit(EXIT_FAILURE);
+	}
+
+	if (ft_strlen(file1) == 0 || ft_strlen(cmd1) == 0
+		|| ft_strlen(cmd2) == 0 || ft_strlen(file2) == 0)
+	{
+		ft_printf(stderr, "Error: Empty argument detected.\n");
+		exit(EXIT_FAILURE);
+	}
+
+	*extract file1, cmd1, cm2, file2;
+
+2. File and command validation:
+	*check if file1 and file2 can be opened (access());
+	*read permission on file1;
+	*write permission on file2;
+	*if not error on exit;
+	*validate that cmd1 and cmd2 are non-empty also with access();
+
+3. Creating pipes and forking:
+	*Create fd array (fd[2]);
+	*pipe(fd) to communicate between the child and the parent processes (fd[0], fd[1]);
+	*fd[0] left side (read) of the pipe;
+	*fd[1] right side (write) of the pipe;
+	*Use fork() to create the child process;
+
+4. Redirect Stdin/stdout:
+	*in child process:
+		*redirect stdin to file1 with dup2();
+		*close unused ends of the pipe;
+		*execute cmd1 with execve();
+	*in parent process:
+		*redirect stdout with dup2();
+		*close unused ends;
+
+5. Execute commands:
+	*execve();
+
+6. Wait for child process:
+	*wait to finish using wait() or waitpid();
+
+7. Redirect to file2;
+	*in the parent process, redirect stdout to file2 using dup2() to the right end of the pipe (fd[1]);
+
+8. Cleaning Up:
+	*close any remaining open fd;
+	*unlink to remove temp files;
+
+	if (close(fd[0]) == -1 || close(fd[1]) == -1)
+	{
+		perror("Error closing pipe ends");
+		exit(EXIT_FAILURE);
+	}
+
+	if (unlink(temp_file) == -1)
+	{
+		perror("Error removing temp file");
+		exit(EXIT_FAILURE);
+	}
+
+9. Error Handling:
+	*check return values of system calls for errors;
+	*print with perror() and strerror();
+
+10. Don't forget to free if malloc'd!;
+
+10. Don't forget MAKEFILE!
