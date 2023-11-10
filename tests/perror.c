@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include <errno.h>
-#include <string.h>
 
-int main()
+int	main()
 {
-	int i;
+	FILE	*fp;
 
-	i = 0;
-	while (i < 134)
+	fp = fopen("file.txt", "r");
+	if (fp == NULL)
 	{
-		printf("%d Error: %s\n", i, strerror(i));
-		i++;
+		perror("Error");
+		return (-1);
 	}
+	fclose(fp);
 	return (0);
 }

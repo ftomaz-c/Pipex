@@ -8,9 +8,9 @@ This project aims to deepen your understanding of the two concepts that you alre
 
 ## Task List
 
- - [ ] Test all of the "new" external functions;
- - [ ] Understand the theory and all the external functions;
- - [ ] Write the pseudo code - parsing, execution, cleanup, etc;
+ - [X] Test all of the "new" external functions;
+ - [X] Understand the theory and all the external functions;
+ - [X] Write the pseudo code - parsing, execution, cleanup, etc;
  - [ ] Write the Program;
  - [ ] Debugging;
 
