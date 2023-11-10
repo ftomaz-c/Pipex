@@ -52,6 +52,7 @@ The <errno.h> header file defines the integer variable errno, which is set by sy
 * Memory Allocation:
 
 		malloc: If dynamic memory allocation is needed, e.g., for storing command arguments.
+  
 		free: To release dynamically allocated memory.
 
 * Error Handling:
