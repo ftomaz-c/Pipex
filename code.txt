@@ -71,4 +71,4 @@
 
 10. Don't forget to free if malloc'd!;
 
-10. Don't forget MAKEFILE!
+11. Don't forget MAKEFILE!

@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 17:03:31 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/09/05 16:09:35 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:47:35 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,48 +27,17 @@ int	found_newline(char *stash)
 	}
 	return (0);
 }
+void	stasher(char **stash, char	*buffer)
+{
+	char *temp;
 
-// char	*ft_strjoin(char *s1, char *s2)
-// {
-// 	char	*temp;
-// 	size_t	i;
-// 	size_t	j;
-
-// 	i = 0;
-// 	j = 0;
-// 	temp = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-// 	if (!temp)
-// 	{
-// 		free(temp);
-// 		free(s1);
-// 		return (NULL);
-// 	}
-// 	while (s1 != NULL && s1[i] != '\0')
-// 	{
-// 		temp[i] = s1[i];
-// 		i++;
-// 	}
-// 	while (s2[j] != '\0')
-// 		temp[i++] = s2[j++];
-// 	temp[i] = '\0';
-// 	if (s1)
-// 		free(s1);
-// 	return (temp);
-// }
-
-// int	ft_strlen(char *str)
-// {
-// 	size_t	count;
-// 	size_t	i;
-
-// 	i = 0;
-// 	count = 0;
-// 	if (!str)
-// 		return (0);
-// 	while (str[i] != '\0')
-// 	{
-// 		count++;
-// 		i++;
-// 	}
-// 	return (count);
-// }
+	temp = NULL;
+	if (*stash)
+		{
+			temp = ft_strjoin(*stash, buffer);
+			free(*stash);
+			*stash = temp;
+		}
+	else
+		*stash = ft_strdup(buffer);
+}

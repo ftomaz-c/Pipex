@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 13:41:59 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/09/05 16:09:36 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:48:47 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	read_and_stash(char **stash, int fd)
 			return ;
 		}
 		buffer[bytes_read] = '\0';
-		*stash = ft_strjoin(*stash, buffer);
+		stasher(stash, buffer);
 	}
 	free(buffer);
 }
