@@ -1,0 +1,6 @@
+./pipex input.txt "cat" "grep text" output.txt
+./pipex empty.txt "cat" "wc -w" output.txt
+./pipex numbers.txt "sort -n" "awk -f sum.awk" output.txt
+./pipex large_file.txt "grep -oE '\w+'" "sort | uniq -c" output.txt
+./pipex csv_data.txt "cut -d ',' -f 2" "sort | uniq" output.txt
+./pipex text_and_numbers.txt "grep -E '[0-9.]'" "awk '{ sum += $2 } END { print sum }'" output.txt

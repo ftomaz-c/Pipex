@@ -1,7 +1,9 @@
 NAME := pipex
 
-SRC :=	main.c \
-		error.c
+SRC :=	src/main.c \
+		src/error.c \
+		src/pipex.c \
+		src/pipex_utils.c
 
 OBJ := $(SRC:.c=.o)
 
@@ -25,9 +27,9 @@ $(LIBFT):
 	@$(MAKE) -C src/libft || (rm -f $(NAME)  && exit 1)
 
 	@echo "$(CYAN)\n# Compiling $(NAME)...\n$(NC)"
+	@echo "cc -Wall -Wextra -Werror -g -I./src/libft/includes -c *.c -o *.o"
 
 $(OBJ): %.o: %.c
-	@echo "cc -Wall -Wextra -Werror -g -I./src/libft/includes -c *.c -o *.o"
 	@echo "$(CYAN)	Compiling $@...$(NC)"
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 

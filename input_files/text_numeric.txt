@@ -1,0 +1,4 @@
+Item,Price
+Apple,1.25
+Banana,0.75
+Orange,1.00
