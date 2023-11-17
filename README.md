@@ -11,8 +11,11 @@ This project aims to deepen your understanding of the two concepts that you alre
  - [X] Test all of the "new" external functions;
  - [X] Understand the theory and all the external functions;
  - [X] Write the [pseudocode - parsing, execution, cleanup, etc](code.txt);
- - [ ] Write the Program;
+ - [X] Write the Program;
  - [ ] Debugging;
+ - [X] Write the BONUS;
+ - [ ] Debugging;
+ - [ ] TEST TEST TEST and study!
 
 ## What is errno?
 
