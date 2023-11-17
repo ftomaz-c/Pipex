@@ -12,8 +12,8 @@ This project aims to deepen your understanding of the two concepts that you alre
  - [X] Understand the theory and all the external functions;
  - [X] Write the [pseudocode - parsing, execution, cleanup, etc](code.txt);
  - [X] Write the Program;
- - [ ] Debugging;
- - [X] Write the BONUS;
+ - [X] Debugging;
+ - [ ] Write the BONUS;
  - [ ] Debugging;
  - [ ] TEST TEST TEST and study!
 
