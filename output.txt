@@ -1,3 +1,0 @@
-Executing command: sed s/sample/test/g
-Executing command: grep test
-This is a test input file.

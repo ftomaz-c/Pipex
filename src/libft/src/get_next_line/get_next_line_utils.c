@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 17:03:31 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/15 16:47:35 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:52:08 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,18 @@ int	found_newline(char *stash)
 	}
 	return (0);
 }
+
 void	stasher(char **stash, char	*buffer)
 {
-	char *temp;
+	char	*temp;
 
 	temp = NULL;
 	if (*stash)
-		{
-			temp = ft_strjoin(*stash, buffer);
-			free(*stash);
-			*stash = temp;
-		}
+	{
+		temp = ft_strjoin(*stash, buffer);
+		free(*stash);
+		*stash = temp;
+	}
 	else
 		*stash = ft_strdup(buffer);
 }

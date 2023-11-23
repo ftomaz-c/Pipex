@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:46:33 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/22 14:44:20 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:25:25 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	count_cmds(char **argv)
 	count = 0;
 	while (argv[++i])
 		count++;
-	return(count);
+	return (count);
 }
 
 void	free_split(char **split)
@@ -53,12 +53,12 @@ void	exec_path(char **path_list, char **cmd_args, char **envp)
 		free(cmd_path);
 		i++;
 	}
-	perror("Error");
+	free(cmd_path);
 }
 
 char	**get_cmd_args(char *cmd)
 {
-	char **cmd_args;
+	char	**cmd_args;
 
 	cmd_args = ft_split(cmd, " ");
 	if (!cmd_args)
@@ -93,6 +93,6 @@ char	**get_path_list(char **envp)
 		exit(EXIT_FAILURE);
 	}
 	free(path_from_envp);
-	return(path_list);
+	return (path_list);
 }
 

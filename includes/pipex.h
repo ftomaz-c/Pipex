@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:03:40 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/22 14:25:43 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:55:28 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <unistd.h>
+# include <sys/types.h>
 # include <sys/wait.h>
 
 /* error.c */

@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:02:38 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/22 15:04:42 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:08:35 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	error(int argc, char **argv)
 
 void	access_check(int argc, char **argv)
 {
-		if (access(argv[1], R_OK) == -1)
+	if (access(argv[1], R_OK) == -1)
 	{
 		perror("Error: accessing input file");
 		exit (EXIT_FAILURE);
