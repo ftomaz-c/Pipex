@@ -6,11 +6,23 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:46:33 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/17 16:15:09 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/22 14:44:20 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pipex.h"
+
+int	count_cmds(char **argv)
+{
+	int	i;
+	int	count;
+
+	i = 2;
+	count = 0;
+	while (argv[++i])
+		count++;
+	return(count);
+}
 
 void	free_split(char **split)
 {
