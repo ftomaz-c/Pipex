@@ -1,0 +1,5 @@
+Executing command: cat with input: 0 and output: 1
+Executing command: grep with input: 0 and output: 1
+This is a sample input file.
+It contains multiple lines of text.
+Each line is a separate sentence.

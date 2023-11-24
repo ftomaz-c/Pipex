@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:46:33 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/23 16:25:25 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:58:24 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	exec_path(char **path_list, char **cmd_args, char **envp)
 		free(cmd_path);
 		i++;
 	}
-	free(cmd_path);
 }
 
 char	**get_cmd_args(char *cmd)
