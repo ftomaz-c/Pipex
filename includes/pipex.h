@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:03:40 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/23 16:55:28 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/27 18:41:42 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	error(int argc, char **argv);
 void	access_check(int argc, char **argv);
 
 /* pipex.c */
-void	pipex(int fd_infile, int fd_outfile, char **argv, char **envp);
-void	exec_process(int fd_input, int fd_output, char *cmd, char **envp);
+void	pipex(char *argv, char **envp);
+void	exec_process(char *cmd, char **envp);
 
 /* pipex_utils.c */
 char	**get_path_list(char **envp);
