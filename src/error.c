@@ -6,13 +6,13 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:02:38 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/11/23 13:08:35 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/11/29 15:05:50 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pipex.h"
 
-void	error(int argc, char **argv)
+void	error1(int argc, char **argv)
 {
 	int i;
 
@@ -31,7 +31,8 @@ void	error(int argc, char **argv)
 		}
 		i++;
 	}
-	access_check(argc, argv);
+	if (ft_strncmp(argv[1], "here_doc", 8) != 0)
+		access_check(argc, argv);
 }
 
 void	access_check(int argc, char **argv)

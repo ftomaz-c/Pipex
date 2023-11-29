@@ -13,9 +13,9 @@ This project aims to deepen your understanding of the two concepts that you alre
  - [X] Write the [pseudocode - parsing, execution, cleanup, etc](code.txt);
  - [X] Write the Program;
  - [X] Debugging;
- - [ ] Write the BONUS;
- - [ ] Debugging;
- - [ ] TEST TEST TEST and study!
+ - [X] Write the BONUS;
+ - [X] Debugging;
+ - [X] TEST TEST TEST and study!
 
 ## What is errno?
 
